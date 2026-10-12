@@ -54,6 +54,12 @@ An LLM-driven strategy agent decides whether to probe deeper, simplify or move o
 
 <br/>
 
+## 🧰 Tech Stack
+
+<img src="assets/skills.svg" alt="Tech stack" width="100%"/>
+
+<br/>
+
 ## 🏆 Highlights
 
 <img src="assets/highlights.svg" alt="Highlights and milestones" width="100%"/>
@@ -85,10 +91,6 @@ An LLM-driven strategy agent decides whether to probe deeper, simplify or move o
 ## 📫 Connect with me
 
 <div align="center">
-
-<sub>Open to AI / ML engineering roles and collaborations.</sub>
-
-<br/><br/>
 
 <a href="mailto:rohityeole2004@gmail.com"><img src="assets/btn-email.svg" alt="Say hello" width="31%"/></a>
 <a href="https://www.linkedin.com/in/rohit-yeole-349b47292/"><img src="assets/btn-linkedin.svg" alt="Connect on LinkedIn" width="31%"/></a>
