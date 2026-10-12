@@ -84,12 +84,14 @@ An LLM-driven strategy agent decides whether to probe deeper, simplify or move o
 
 ## 📫 Connect with me
 
-<img src="assets/connect.svg" alt="Connect with Rohit Yeole" width="100%"/>
-
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-Say_hello-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rohityeole2004@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohit-yeole-349b47292/)
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-Read_my_papers-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Rohit-Yeole-3)
+<sub>Open to AI / ML engineering roles and collaborations.</sub>
+
+<br/><br/>
+
+<a href="mailto:rohityeole2004@gmail.com"><img src="assets/btn-email.svg" alt="Say hello" width="31%"/></a>
+<a href="https://www.linkedin.com/in/rohit-yeole-349b47292/"><img src="assets/btn-linkedin.svg" alt="Connect on LinkedIn" width="31%"/></a>
+<a href="https://www.researchgate.net/profile/Rohit-Yeole-3"><img src="assets/btn-researchgate.svg" alt="Read my papers on ResearchGate" width="31%"/></a>
 
 </div>
