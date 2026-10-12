@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/hero-v2.svg" alt="Rohit Yeole - AI Engineer and Data Scientist" width="100%"/>
+<img src="assets/hero-v3.svg" alt="Rohit Yeole - AI Engineer and Data Scientist" width="100%"/>
 
 </div>
 
