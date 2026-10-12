@@ -1,58 +1,79 @@
 <div align="center">
 
-![Rohit Yeole](assets/hero.svg)
+<img src="assets/hero.svg" alt="Rohit Yeole - AI Engineer and Data Scientist" width="100%"/>
 
-**I build AI systems that read messy documents and talk to real customers.**
-Data Science Intern @ **PharmEasy** · Final-year IT @ VIT Pune · 2× IEEE author
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/Deep_Learning-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
-![HuggingFace](https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![LangChain](https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langchain&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=postgresql&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/Deep_Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![HuggingFace](https://img.shields.io/badge/Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white)
 
 </div>
 
----
+<img src="assets/intro.svg" alt="About me - terminal intro" width="100%"/>
 
-## ⚡ What I'm doing right now
+<br/>
 
-- 🏥 **PharmEasy** - building an AI customer-support agent (intent routing + tool use, **76%** of queries resolved with no human) and an OCR prescription reader (**89%** extraction accuracy) that turns a photo into a cart.
-- 🎓 **Amazon ML Summer School 2026** - selected.
-- 🔭 Exploring: agentic workflows, RAG evaluation, layout-aware document models.
+## 🎬 My work, in motion
 
-## 🧪 How a prescription becomes a cart
+Each card below is a small animated film of how the project actually works.
 
-![pipeline](assets/pipeline.svg)
+### 01 · Invoice OCR → structured JSON
+<img src="assets/scene-ocr.svg" alt="Invoice OCR pipeline animation" width="100%"/>
 
-<sub>Simplified view of the type of pipeline I work on: classification, OCR and NER feeding product matching.</sub>
+Scanned invoices become searchable PDFs and clean JSON. PaddleOCR finds the text and boxes, and a fine-tuned **LayoutLMv3** labels the fields.
+**97% SeqEval F1 · 94.5% OCR accuracy** → [`OCR--Text-to-JSON`](https://github.com/ro-hit-10/OCR--Text-to-JSON)
 
-## 🚀 Selected work
+### 02 · AI customer-support agent <sub>@ PharmEasy</sub>
+<img src="assets/scene-agent.svg" alt="Support agent routing animation" width="100%"/>
 
-| Project | What it does | Stack | Result |
-|---|---|---|---|
-| [**OCR → Text-to-JSON**](https://github.com/ro-hit-10/OCR--Text-to-JSON) | Turns scanned and digital invoices into searchable PDFs and structured CSV/JSON | PaddleOCR, PP-StructureV3, LayoutLMv3 | **97%** SeqEval F1 · **94.5%** OCR accuracy |
-| [**Merchant Growth AI**](https://github.com/ro-hit-10/Merchant-Growth-AI) | AI growth assistant for merchants using multi-agent tool calling and RAG | FastAPI, LangGraph, Gemini | Multi-agent + RAG |
-| [**Support Ticket Intelligence**](https://github.com/ro-hit-10/Support-Ticket-Intelligence-Agentic-AI-System) | Agentic system that triages and handles support tickets | Agentic AI | - |
-| [**AI Mock Interview Coach**](https://github.com/ro-hit-10/ai-mock-interview-coach) | Practice interviews with AI feedback | Python | - |
-| [**AI Mental Health Screening**](https://github.com/ro-hit-10/AI_Based_Mental_Health_Screening) | PHQ-9 based depression screening with generated follow-up questions | RoBERTa, T5 | **95.6%** depression-prediction accuracy |
-| **CodePulse AI** | RAG over repositories + n8n agents wired to GitHub, CI/CD and Semgrep | n8n, Gemini Embeddings | **86%** on code Q&A and error tracing |
+An LLM router reads the intent and calls the right tool across FAQs, orders, refunds, returns and ticketing. **76%** of queries are resolved with no human.
+Related: [`Support-Ticket-Intelligence-Agentic-AI-System`](https://github.com/ro-hit-10/Support-Ticket-Intelligence-Agentic-AI-System)
+
+### 03 · Prescription photo → cart <sub>@ PharmEasy</sub>
+<img src="assets/scene-rx.svg" alt="Prescription to cart animation" width="100%"/>
+
+Zero-shot classification, OCR and NER pull drugs, doses and durations from a photo, then match them to catalog products and build the cart. **89%** extraction accuracy.
+
+### 04 · Mental-health screening
+<img src="assets/scene-mental.svg" alt="Mental health screening animation" width="100%"/>
+
+RoBERTa models for domain classification (**80%**) and depression prediction (**95.6%**), plus T5 for contextual follow-up questions. Built as an aid for therapists, not a diagnosis. → [`AI_Based_Mental_Health_Screening`](https://github.com/ro-hit-10/AI_Based_Mental_Health_Screening)
+
+### 05 · CodePulse AI - repository intelligence
+<img src="assets/scene-rag.svg" alt="RAG over repositories animation" width="100%"/>
+
+n8n agentic workflows link GitHub, CI/CD and Semgrep to a vector database, so you can ask questions about a codebase and trace errors. **86%** on code Q&A.
+
+### 06 · Merchant Growth AI
+<img src="assets/scene-multi.svg" alt="Multi-agent system animation" width="100%"/>
+
+A LangGraph planner delegates to specialist agents and RAG, then returns a growth plan for a merchant. → [`Merchant-Growth-AI`](https://github.com/ro-hit-10/Merchant-Growth-AI)
+
+### 07 · Credit-card fraud detection <sub>· IEEE ICOSEC 2024</sub>
+<img src="assets/scene-fraud.svg" alt="SMOTE and XGBoost animation" width="100%"/>
+
+SMOTE rebalances 30K+ transactions from 80:20 to 50:50. Four models are compared on F2-score, and XGBoost reaches **88% recall**.
+
+<br/>
 
 ## 📄 Publications
 
-- **Predictive maintenance for small-scale wind turbines using IoT + ML** - SCIS 2025, Canberra · [DOI](https://doi.org/10.1007/978-3-032-22917-5_18)
-- **AI-assisted mental health screening** - [DOI](https://doi.org/10.2991/978-94-6463-858-5_9)
-- **Credit-card fraud detection (SMOTE + XGBoost, 88% recall)** - ICOSEC 2024 · [DOI](https://doi.org/10.1109/ICOSEC61587.2024.10722667)
-- **IoT-based emergency vehicle alert system** - ICIPCN 2024, Kathmandu University · [DOI](https://doi.org/10.1109/ICIPCN63822.2024.00119)
+| Paper | Venue |
+|---|---|
+| Predictive maintenance for small-scale wind turbines using IoT + ML | SCIS 2025, Canberra · [DOI](https://doi.org/10.1007/978-3-032-22917-5_18) |
+| AI-assisted mental-health screening | [DOI](https://doi.org/10.2991/978-94-6463-858-5_9) |
+| Credit-card fraud detection with SMOTE + XGBoost | IEEE ICOSEC 2024 · [DOI](https://doi.org/10.1109/ICOSEC61587.2024.10722667) |
+| IoT-based emergency vehicle alert system | IEEE ICIPCN 2024, Kathmandu University · [DOI](https://doi.org/10.1109/ICIPCN63822.2024.00119) |
 
 ## 🏆 Highlights
 
-- 🥇 **Top 10 finalist**, UBS Hackathon 2025 - *Ed-Connect*, AI mentorship for underprivileged students
+- 🎓 **Amazon Machine Learning Summer School 2026** - selected
+- 🥇 **Top-10 finalist, UBS Hackathon 2025** - *Ed-Connect*, AI mentorship for underprivileged students
 - 🛡️ Ran cybersecurity challenges for **1,500+ participants** at Hack Envasion CTF 2024
-- 🎓 Deep Learning Specialization (DeepLearning.AI)
+- 📚 Deep Learning Specialization (DeepLearning.AI)
 
 ## 🐍 Contribution snake
 

@@ -1,85 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" role="img" aria-label="Rohit Yeole - AI Engineer and Data Scientist">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b1020"/>
-      <stop offset="1" stop-color="#1a0f33"/>
-    </linearGradient>
-    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#6ee7ff"/>
-      <stop offset="1" stop-color="#c084fc"/>
-    </linearGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
-    </pattern>
-    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6ee7ff" stop-opacity="0"/>
-      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0.35"/>
-    </linearGradient>
-    <clipPath id="clip"><rect width="1000" height="340" rx="18"/></clipPath>
-  </defs>
-  <style>
-    text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
-    .name { font-size: 64px; font-weight: 700; fill: url(#ink); }
-    .sub  { font-size: 22px; fill: #cbd5e1; }
-    .tag  { font-size: 12px; font-weight: 700; fill: #0b1020; }
-    .dim  { font-size: 14px; fill: #64748b; }
-    .box  { fill: none; stroke-width: 2; stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.2s ease-out forwards; }
-    .b1 { stroke: #6ee7ff; animation-delay: .4s; }
-    .b2 { stroke: #c084fc; animation-delay: 1.0s; }
-    .b3 { stroke: #34d399; animation-delay: 1.6s; }
-    .lab { opacity: 0; animation: pop .4s ease-out forwards; }
-    .l1 { animation-delay: 1.2s; } .l2 { animation-delay: 1.8s; } .l3 { animation-delay: 2.4s; }
-    .scanline { animation: sweep 5s linear infinite; }
-    .cursor { animation: blink 1s steps(1) infinite; }
-    .role { opacity: 0; animation: roles 9s infinite; }
-    .r2 { animation-delay: 3s; } .r3 { animation-delay: 6s; }
-    @keyframes draw  { to { stroke-dashoffset: 0; } }
-    @keyframes pop   { to { opacity: 1; } }
-    @keyframes sweep { from { transform: translateY(-120px); } to { transform: translateY(360px); } }
-    @keyframes blink { 50% { opacity: 0; } }
-    @keyframes roles { 0% {opacity:0} 4% {opacity:1} 30% {opacity:1} 34% {opacity:0} 100% {opacity:0} }
-  </style>
-  <g clip-path="url(#clip)">
-    <rect width="1000" height="340" fill="url(#bg)"/>
-    <rect width="1000" height="340" fill="url(#grid)"/>
-    <circle cx="880" cy="60" r="160" fill="#c084fc" opacity="0.10"/>
-    <circle cx="120" cy="320" r="180" fill="#6ee7ff" opacity="0.08"/>
-
-    <!-- OCR scan sweep -->
-    <g class="scanline">
-      <rect x="0" y="0" width="1000" height="120" fill="url(#scan)"/>
-      <rect x="0" y="119" width="1000" height="2" fill="#6ee7ff" opacity="0.9"/>
-    </g>
-
-    <text x="60" y="70" class="dim">$ python extract.py --doc rohit.pdf</text>
-
-    <!-- "document" being parsed: bounding boxes + labels -->
-    <rect class="box b1" x="52" y="96" width="560" height="84" rx="6"/>
-    <g class="lab l1"><rect x="52" y="76" width="118" height="20" rx="4" fill="#6ee7ff"/><text x="60" y="91" class="tag">NAME  0.99</text></g>
-    <text x="60" y="160" class="name">Rohit Yeole</text>
-
-    <rect class="box b2" x="52" y="196" width="560" height="40" rx="6"/>
-    <g class="lab l2"><rect x="52" y="176" width="128" height="20" rx="4" fill="#c084fc"/><text x="60" y="191" class="tag">ROLE  0.97</text></g>
-    <g>
-      <text x="60" y="224" class="sub role">AI Engineer<tspan class="cursor">_</tspan></text>
-      <text x="60" y="224" class="sub role r2">Data Scientist<tspan class="cursor">_</tspan></text>
-      <text x="60" y="224" class="sub role r3">Document-AI &amp; Agentic Systems<tspan class="cursor">_</tspan></text>
-    </g>
-
-    <rect class="box b3" x="52" y="262" width="560" height="38" rx="6"/>
-    <g class="lab l3"><rect x="52" y="242" width="150" height="20" rx="4" fill="#34d399"/><text x="60" y="257" class="tag">ENTITY  F1 0.97</text></g>
-    <text x="60" y="287" class="sub" style="font-size:17px">LayoutLMv3 · PaddleOCR · LLM agents · RAG</text>
-
-    <!-- right-hand JSON output -->
-    <g transform="translate(690 78)">
-      <rect width="262" height="196" rx="10" fill="#0b1020" fill-opacity="0.75" stroke="#ffffff" stroke-opacity="0.12"/>
-      <text x="16" y="30" class="dim" style="fill:#94a3b8">output.json</text>
-      <text x="16" y="58"  style="font-size:14px;fill:#e2e8f0">{</text>
-      <text x="30" y="82"  style="font-size:14px;fill:#6ee7ff">"seqeval_f1"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">0.97</tspan><tspan fill="#e2e8f0">,</tspan></text>
-      <text x="30" y="106" style="font-size:14px;fill:#c084fc">"rx_accuracy"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">0.89</tspan><tspan fill="#e2e8f0">,</tspan></text>
-      <text x="30" y="130" style="font-size:14px;fill:#34d399">"auto_resolved"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">0.76</tspan><tspan fill="#e2e8f0">,</tspan></text>
-      <text x="30" y="154" style="font-size:14px;fill:#6ee7ff">"papers"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">4</tspan></text>
-      <text x="16" y="178" style="font-size:14px;fill:#e2e8f0">}</text>
-    </g>
-  </g>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1a0f33"/></linearGradient>
+<linearGradient id="ink" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6ee7ff"/><stop offset="1" stop-color="#c084fc"/></linearGradient>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="c"><rect width="1000" height="340" rx="18"/></clipPath>
+</defs>
+<style>
+text{font-family:'JetBrains Mono','Fira Code',Consolas,'Courier New',monospace;fill:#e2e8f0;font-size:13px}
+.d{fill:#94a3b8;font-size:11px}
+.h{font-size:11px;font-weight:700;letter-spacing:2px}
+.b{font-weight:700}
+.flow{fill:none;stroke-width:2;stroke-dasharray:6 6;animation:dash 1s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-12}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes blink{50%{opacity:0}}
+.pulse{animation:pulse 1.6s ease-in-out infinite}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes k1{0%,2%{clip-path:inset(0 100% 0 0);opacity:1}14%,100%{clip-path:inset(0 0 0 0);opacity:1}}.a1{animation:k1 10s infinite both;animation-timing-function:steps(11,end);}@keyframes k2{0%{opacity:1}22%{opacity:1}24%,100%{opacity:0}}.a2{animation:k2 10s infinite both;}@keyframes k3{0%,25%{opacity:0}27%,47%{opacity:1}49%,100%{opacity:0}}.a3{animation:k3 10s infinite both;}@keyframes k4{0%,50%{opacity:0}52%,72%{opacity:1}74%,100%{opacity:0}}.a4{animation:k4 10s infinite both;}@keyframes k5{0%,75%{opacity:0}77%,97%{opacity:1}99%,100%{opacity:0}}.a5{animation:k5 10s infinite both;}.fl{animation:fl 6s ease-in-out infinite}@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}@keyframes k6{0%,30%{opacity:0;transform:translate(0px,10px)}33%,100%{opacity:1;transform:translate(0,0)}}.a6{animation:k6 10s infinite both;animation-timing-function:cubic-bezier(.2,.8,.2,1);}@keyframes k7{0%,35%{opacity:0;transform:translate(0px,10px)}38%,100%{opacity:1;transform:translate(0,0)}}.a7{animation:k7 10s infinite both;animation-timing-function:cubic-bezier(.2,.8,.2,1);}@keyframes k8{0%,40%{opacity:0;transform:translate(0px,10px)}43%,100%{opacity:1;transform:translate(0,0)}}.a8{animation:k8 10s infinite both;animation-timing-function:cubic-bezier(.2,.8,.2,1);}@keyframes k9{0%,45%{opacity:0;transform:translate(0px,10px)}48%,100%{opacity:1;transform:translate(0,0)}}.a9{animation:k9 10s infinite both;animation-timing-function:cubic-bezier(.2,.8,.2,1);}
+@keyframes sweep{from{transform:translateY(-60px)}to{transform:translateY(400px)}}
+.sw{animation:sweep 6s linear infinite}
+</style>
+<g clip-path="url(#c)">
+<rect width="1000" height="340" fill="url(#bg)"/>
+<line x1="456" y1="187" x2="507" y2="196" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="456" y1="187" x2="445" y2="270" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="456" y1="187" x2="518" y2="211" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="456" y1="187" x2="500" y2="217" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="456" y1="187" x2="461" y2="105" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="890" y1="160" x2="813" y2="231" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="890" y1="160" x2="819" y2="137" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="890" y1="160" x2="921" y2="271" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="890" y1="160" x2="877" y2="161" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="890" y1="160" x2="942" y2="140" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="890" y1="160" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="507" y1="196" x2="445" y2="270" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="507" y1="196" x2="518" y2="211" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="507" y1="196" x2="500" y2="217" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="507" y1="196" x2="461" y2="105" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="210" y1="173" x2="127" y2="113" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="210" y1="173" x2="215" y2="95" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="210" y1="173" x2="107" y2="208" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="210" y1="173" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="210" y1="173" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="619" y1="256" x2="642" y2="204" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="619" y1="256" x2="518" y2="211" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="185" y2="28" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="215" y2="95" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="68" y2="159" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="41" y2="85" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="107" y2="208" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="127" y1="113" x2="133" y2="41" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="123" y1="260" x2="68" y2="159" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="123" y1="260" x2="107" y2="208" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="678" y1="36" x2="756" y2="103" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="944" y1="306" x2="958" y2="315" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="944" y1="306" x2="921" y2="271" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="944" y1="306" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="185" y1="28" x2="215" y2="95" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="185" y1="28" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="185" y1="28" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="185" y1="28" x2="133" y2="41" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="526" y1="41" x2="461" y2="105" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="215" y1="95" x2="330" y2="91" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="215" y1="95" x2="306" y2="45" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="215" y1="95" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="215" y1="95" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="215" y1="95" x2="133" y2="41" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="68" y1="159" x2="41" y2="85" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="68" y1="159" x2="107" y2="208" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="68" y1="159" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="68" y1="159" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="445" y1="270" x2="518" y2="211" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="445" y1="270" x2="500" y2="217" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="518" y1="211" x2="500" y2="217" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="500" y1="217" x2="461" y2="105" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="958" y1="315" x2="921" y2="271" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="958" y1="315" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="813" y1="231" x2="745" y2="141" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="813" y1="231" x2="819" y2="137" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="813" y1="231" x2="921" y2="271" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="813" y1="231" x2="877" y2="161" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="813" y1="231" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="330" y1="91" x2="306" y2="45" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="745" y1="141" x2="819" y2="137" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="745" y1="141" x2="756" y2="103" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="819" y1="137" x2="877" y2="161" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="819" y1="137" x2="756" y2="103" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="921" y1="271" x2="877" y2="161" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="921" y1="271" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="41" y1="85" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="41" y1="85" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="41" y1="85" x2="133" y2="41" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="877" y1="161" x2="942" y2="140" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="877" y1="161" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="942" y1="140" x2="927" y2="245" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="107" y1="208" x2="120" y2="121" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="107" y1="208" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="120" y1="121" x2="149" y2="96" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="120" y1="121" x2="133" y2="41" stroke="#6ee7ff" stroke-opacity=".12"/><line x1="149" y1="96" x2="133" y2="41" stroke="#6ee7ff" stroke-opacity=".12"/><circle cx="456" cy="187" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:0.0s;animation-duration:2.0s"/><circle cx="890" cy="160" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:0.35s;animation-duration:2.5s"/><circle cx="507" cy="196" r="2.8" fill="#34d399" class="pulse" style="animation-delay:0.7s;animation-duration:3.0s"/><circle cx="210" cy="173" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:1.0499999999999998s;animation-duration:3.5s"/><circle cx="619" cy="256" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:1.4s;animation-duration:4.0s"/><circle cx="127" cy="113" r="2.8" fill="#34d399" class="pulse" style="animation-delay:1.75s;animation-duration:2.0s"/><circle cx="123" cy="260" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:2.0999999999999996s;animation-duration:2.5s"/><circle cx="678" cy="36" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:0.0s;animation-duration:3.0s"/><circle cx="944" cy="306" r="2.8" fill="#34d399" class="pulse" style="animation-delay:0.35s;animation-duration:3.5s"/><circle cx="642" cy="204" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:0.7s;animation-duration:4.0s"/><circle cx="185" cy="28" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:1.0499999999999998s;animation-duration:2.0s"/><circle cx="526" cy="41" r="2.8" fill="#34d399" class="pulse" style="animation-delay:1.4s;animation-duration:2.5s"/><circle cx="215" cy="95" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:1.75s;animation-duration:3.0s"/><circle cx="68" cy="159" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:2.0999999999999996s;animation-duration:3.5s"/><circle cx="445" cy="270" r="2.8" fill="#34d399" class="pulse" style="animation-delay:0.0s;animation-duration:4.0s"/><circle cx="518" cy="211" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:0.35s;animation-duration:2.0s"/><circle cx="500" cy="217" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:0.7s;animation-duration:2.5s"/><circle cx="461" cy="105" r="2.8" fill="#34d399" class="pulse" style="animation-delay:1.0499999999999998s;animation-duration:3.0s"/><circle cx="958" cy="315" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:1.4s;animation-duration:3.5s"/><circle cx="813" cy="231" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:1.75s;animation-duration:4.0s"/><circle cx="330" cy="91" r="2.8" fill="#34d399" class="pulse" style="animation-delay:2.0999999999999996s;animation-duration:2.0s"/><circle cx="306" cy="45" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:0.0s;animation-duration:2.5s"/><circle cx="745" cy="141" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:0.35s;animation-duration:3.0s"/><circle cx="819" cy="137" r="2.8" fill="#34d399" class="pulse" style="animation-delay:0.7s;animation-duration:3.5s"/><circle cx="921" cy="271" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:1.0499999999999998s;animation-duration:4.0s"/><circle cx="41" cy="85" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:1.4s;animation-duration:2.0s"/><circle cx="877" cy="161" r="2.8" fill="#34d399" class="pulse" style="animation-delay:1.75s;animation-duration:2.5s"/><circle cx="942" cy="140" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:2.0999999999999996s;animation-duration:3.0s"/><circle cx="107" cy="208" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:0.0s;animation-duration:3.5s"/><circle cx="756" cy="103" r="2.8" fill="#34d399" class="pulse" style="animation-delay:0.35s;animation-duration:4.0s"/><circle cx="120" cy="121" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:0.7s;animation-duration:2.0s"/><circle cx="927" cy="245" r="2.8" fill="#c084fc" class="pulse" style="animation-delay:1.0499999999999998s;animation-duration:2.5s"/><circle cx="149" cy="96" r="2.8" fill="#34d399" class="pulse" style="animation-delay:1.4s;animation-duration:3.0s"/><circle cx="133" cy="41" r="2.8" fill="#6ee7ff" class="pulse" style="animation-delay:1.75s;animation-duration:3.5s"/>
+<circle cx="880" cy="40" r="170" fill="#c084fc" opacity=".10"/>
+<circle cx="100" cy="330" r="190" fill="#6ee7ff" opacity=".08"/>
+<g class="sw"><rect width="1000" height="2" fill="#6ee7ff" opacity=".5" filter="url(#glow)"/></g>
+<text x="64" y="86" class="d" style="font-size:13px">$ python extract.py --profile rohit_yeole.pdf</text>
+<g class="fl"><text x="64" y="160" class="b a1" style="font-size:64px;fill:url(#ink)">Rohit Yeole</text></g>
+<text x="64" y="212" class="a2" style="font-size:26px;fill:#e2e8f0">AI Engineer<tspan class="blink" style="fill:#6ee7ff">_</tspan></text><text x="64" y="212" class="a3" style="font-size:26px;fill:#e2e8f0">Data Scientist<tspan class="blink" style="fill:#6ee7ff">_</tspan></text><text x="64" y="212" class="a4" style="font-size:26px;fill:#e2e8f0">Document-AI Builder<tspan class="blink" style="fill:#6ee7ff">_</tspan></text><text x="64" y="212" class="a5" style="font-size:26px;fill:#e2e8f0">Agentic-Systems Tinkerer<tspan class="blink" style="fill:#6ee7ff">_</tspan></text>
+<g class="a6"><rect x="64" y="262" width="247.20000000000002" height="30" rx="15" fill="#0b1020" stroke="#6ee7ff" stroke-width="1.5" /><text x="187.60000000000002" y="282" class="b" style="fill:#6ee7ff;font-size:11px;" text-anchor="middle" >PharmEasy · Data Science Intern</text></g><g class="a7"><rect x="330" y="262" width="218.4" height="30" rx="15" fill="#0b1020" stroke="#c084fc" stroke-width="1.5" /><text x="439.2" y="282" class="b" style="fill:#c084fc;font-size:11px;" text-anchor="middle" >Amazon ML Summer School '26</text></g><g class="a8"><rect x="598" y="262" width="153.6" height="30" rx="15" fill="#0b1020" stroke="#34d399" stroke-width="1.5" /><text x="674.8" y="282" class="b" style="fill:#34d399;font-size:11px;" text-anchor="middle" >4 published papers</text></g><g class="a9"><rect x="776" y="262" width="168.0" height="30" rx="15" fill="#0b1020" stroke="#fbbf24" stroke-width="1.5" /><text x="860.0" y="282" class="b" style="fill:#fbbf24;font-size:11px;" text-anchor="middle" >VIT Pune · B.Tech IT</text></g>
+</g>
 </svg>
