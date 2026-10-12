@@ -8,6 +8,17 @@
 
 <br/>
 
+## 🧑‍💻 Experience
+
+<div align="center">
+
+<img src="assets/exp-pharmeasy.svg" alt="PharmEasy - Data Science Intern, Jul 2026 to Present" title="PharmEasy - Data Science Intern (Jul 2026 - Present): Building LLM-powered customer-support automation and an OCR-based prescription reader: intent routing, tool calling, classification, OCR and entity extraction." width="49%"/>
+<img src="assets/exp-datanorth.svg" alt="Data North Technologies - Data Science Intern, Jun to Aug 2025" title="Data North Technologies - Data Science Intern (Jun 2025 - Aug 2025): Built an invoice document-processing pipeline with PaddleOCR and a fine-tuned LayoutLMv3 for key-information extraction. 97% SeqEval F1, 94.5% OCR accuracy." width="49%"/>
+
+</div>
+
+<br/>
+
 ## 💼 My Work
 
 ### 01 · Invoice information extraction
