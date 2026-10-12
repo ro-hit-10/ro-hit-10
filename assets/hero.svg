@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="340" viewBox="0 0 1000 340" role="img" aria-label="Rohit Yeole - AI Engineer and Data Scientist">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#1a0f33"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ee7ff"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6ee7ff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0.35"/>
+    </linearGradient>
+    <clipPath id="clip"><rect width="1000" height="340" rx="18"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: 'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace; }
+    .name { font-size: 64px; font-weight: 700; fill: url(#ink); }
+    .sub  { font-size: 22px; fill: #cbd5e1; }
+    .tag  { font-size: 12px; font-weight: 700; fill: #0b1020; }
+    .dim  { font-size: 14px; fill: #64748b; }
+    .box  { fill: none; stroke-width: 2; stroke-dasharray: 600; stroke-dashoffset: 600; animation: draw 1.2s ease-out forwards; }
+    .b1 { stroke: #6ee7ff; animation-delay: .4s; }
+    .b2 { stroke: #c084fc; animation-delay: 1.0s; }
+    .b3 { stroke: #34d399; animation-delay: 1.6s; }
+    .lab { opacity: 0; animation: pop .4s ease-out forwards; }
+    .l1 { animation-delay: 1.2s; } .l2 { animation-delay: 1.8s; } .l3 { animation-delay: 2.4s; }
+    .scanline { animation: sweep 5s linear infinite; }
+    .cursor { animation: blink 1s steps(1) infinite; }
+    .role { opacity: 0; animation: roles 9s infinite; }
+    .r2 { animation-delay: 3s; } .r3 { animation-delay: 6s; }
+    @keyframes draw  { to { stroke-dashoffset: 0; } }
+    @keyframes pop   { to { opacity: 1; } }
+    @keyframes sweep { from { transform: translateY(-120px); } to { transform: translateY(360px); } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @keyframes roles { 0% {opacity:0} 4% {opacity:1} 30% {opacity:1} 34% {opacity:0} 100% {opacity:0} }
+  </style>
+  <g clip-path="url(#clip)">
+    <rect width="1000" height="340" fill="url(#bg)"/>
+    <rect width="1000" height="340" fill="url(#grid)"/>
+    <circle cx="880" cy="60" r="160" fill="#c084fc" opacity="0.10"/>
+    <circle cx="120" cy="320" r="180" fill="#6ee7ff" opacity="0.08"/>
+
+    <!-- OCR scan sweep -->
+    <g class="scanline">
+      <rect x="0" y="0" width="1000" height="120" fill="url(#scan)"/>
+      <rect x="0" y="119" width="1000" height="2" fill="#6ee7ff" opacity="0.9"/>
+    </g>
+
+    <text x="60" y="70" class="dim">$ python extract.py --doc rohit.pdf</text>
+
+    <!-- "document" being parsed: bounding boxes + labels -->
+    <rect class="box b1" x="52" y="96" width="560" height="84" rx="6"/>
+    <g class="lab l1"><rect x="52" y="76" width="118" height="20" rx="4" fill="#6ee7ff"/><text x="60" y="91" class="tag">NAME  0.99</text></g>
+    <text x="60" y="160" class="name">Rohit Yeole</text>
+
+    <rect class="box b2" x="52" y="196" width="560" height="40" rx="6"/>
+    <g class="lab l2"><rect x="52" y="176" width="128" height="20" rx="4" fill="#c084fc"/><text x="60" y="191" class="tag">ROLE  0.97</text></g>
+    <g>
+      <text x="60" y="224" class="sub role">AI Engineer<tspan class="cursor">_</tspan></text>
+      <text x="60" y="224" class="sub role r2">Data Scientist<tspan class="cursor">_</tspan></text>
+      <text x="60" y="224" class="sub role r3">Document-AI &amp; Agentic Systems<tspan class="cursor">_</tspan></text>
+    </g>
+
+    <rect class="box b3" x="52" y="262" width="560" height="38" rx="6"/>
+    <g class="lab l3"><rect x="52" y="242" width="150" height="20" rx="4" fill="#34d399"/><text x="60" y="257" class="tag">ENTITY  F1 0.97</text></g>
+    <text x="60" y="287" class="sub" style="font-size:17px">LayoutLMv3 · PaddleOCR · LLM agents · RAG</text>
+
+    <!-- right-hand JSON output -->
+    <g transform="translate(690 78)">
+      <rect width="262" height="196" rx="10" fill="#0b1020" fill-opacity="0.75" stroke="#ffffff" stroke-opacity="0.12"/>
+      <text x="16" y="30" class="dim" style="fill:#94a3b8">output.json</text>
+      <text x="16" y="58"  style="font-size:14px;fill:#e2e8f0">{</text>
+      <text x="30" y="82"  style="font-size:14px;fill:#6ee7ff">"seqeval_f1"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">0.97</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="30" y="106" style="font-size:14px;fill:#c084fc">"rx_accuracy"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">0.89</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="30" y="130" style="font-size:14px;fill:#34d399">"auto_resolved"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">0.76</tspan><tspan fill="#e2e8f0">,</tspan></text>
+      <text x="30" y="154" style="font-size:14px;fill:#6ee7ff">"papers"<tspan fill="#e2e8f0">: </tspan><tspan fill="#fbbf24">4</tspan></text>
+      <text x="16" y="178" style="font-size:14px;fill:#e2e8f0">}</text>
+    </g>
+  </g>
+</svg>
