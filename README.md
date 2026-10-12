@@ -12,68 +12,66 @@
 
 </div>
 
-<img src="assets/intro.svg" alt="About me - terminal intro" width="100%"/>
+<img src="assets/intro.svg" alt="About Rohit Yeole" width="100%"/>
 
 <br/>
 
-## 🎬 My work, in motion
+## 🎬 Projects, in motion
 
-Each card below is a small animated film of how the project actually works.
+Each animation is built from the real architecture of the project.
 
-### 01 · Invoice OCR → structured JSON
-<img src="assets/scene-ocr.svg" alt="Invoice OCR pipeline animation" width="100%"/>
+### 01 · Invoice information extraction
+<img src="assets/scene-ocr.svg" alt="Invoice extraction architecture animation" width="100%"/>
 
-Scanned invoices become searchable PDFs and clean JSON. PaddleOCR finds the text and boxes, and a fine-tuned **LayoutLMv3** labels the fields.
-**97% SeqEval F1 · 94.5% OCR accuracy** → [`OCR--Text-to-JSON`](https://github.com/ro-hit-10/OCR--Text-to-JSON)
+Label Studio annotation, then a fine-tuned **LayoutLMv3** reads PaddleOCR output and returns structured JSON. **97% entity F1 · 94.5% OCR accuracy.**
+→ [OCR--Text-to-JSON](https://github.com/ro-hit-10/OCR--Text-to-JSON)
 
-### 02 · AI customer-support agent <sub>@ PharmEasy</sub>
-<img src="assets/scene-agent.svg" alt="Support agent routing animation" width="100%"/>
+### 02 · AI-assisted mental-health screening
+<img src="assets/scene-mental.svg" alt="Mental health screening architecture animation" width="100%"/>
 
-An LLM router reads the intent and calls the right tool across FAQs, orders, refunds, returns and ticketing. **76%** of queries are resolved with no human.
-Related: [`Support-Ticket-Intelligence-Agentic-AI-System`](https://github.com/ro-hit-10/Support-Ticket-Intelligence-Agentic-AI-System)
+PHQ-9 intake, RoBERTa domain and severity models, T5 follow-up questions and recommendations, with MongoDB behind a clinician dashboard. **95.6% depression-prediction accuracy.** Built as an aid, not a diagnosis.
+→ [AI_Based_Mental_Health_Screening](https://github.com/ro-hit-10/AI_Based_Mental_Health_Screening)
 
-### 03 · Prescription photo → cart <sub>@ PharmEasy</sub>
-<img src="assets/scene-rx.svg" alt="Prescription to cart animation" width="100%"/>
+### 03 · CodePulse AI
+<img src="assets/scene-codepulse.svg" alt="CodePulse AI architecture animation" width="100%"/>
 
-Zero-shot classification, OCR and NER pull drugs, doses and durations from a photo, then match them to catalog products and build the cart. **89%** extraction accuracy.
+n8n workflows chunk and embed a repository into Supabase pgvector, run Semgrep and CI/CD checks in parallel, and power a RAG chatbot for code navigation. **86% on code reasoning and Q&A.**
 
-### 04 · Mental-health screening
-<img src="assets/scene-mental.svg" alt="Mental health screening animation" width="100%"/>
+### 04 · Vriddhi - Merchant Growth AI
+<img src="assets/scene-merchant.svg" alt="Merchant Growth AI architecture animation" width="100%"/>
 
-RoBERTa models for domain classification (**80%**) and depression prediction (**95.6%**), plus T5 for contextual follow-up questions. Built as an aid for therapists, not a diagnosis. → [`AI_Based_Mental_Health_Screening`](https://github.com/ro-hit-10/AI_Based_Mental_Health_Screening)
+A LangGraph orchestrator plans and delegates to specialist agents, with guardrails and human approval before any action runs.
+**[▶ Live demo](https://vriddhi-merchant-growth-ai.vercel.app/)** · [Source](https://github.com/ro-hit-10/Merchant-Growth-AI)
 
-### 05 · CodePulse AI - repository intelligence
-<img src="assets/scene-rag.svg" alt="RAG over repositories animation" width="100%"/>
+### 05 · Credit-card fraud detection
+<img src="assets/scene-fraud.svg" alt="Fraud detection animation" width="100%"/>
 
-n8n agentic workflows link GitHub, CI/CD and Semgrep to a vector database, so you can ask questions about a codebase and trace errors. **86%** on code Q&A.
+SMOTE rebalances 30K+ transactions from 80:20 to 50:50. XGBoost wins on F2-score with **88% recall**. Published at IEEE ICOSEC 2024.
 
-### 06 · Merchant Growth AI
-<img src="assets/scene-multi.svg" alt="Multi-agent system animation" width="100%"/>
+### 06 · FairHire - adaptive AI interview coach
+<img src="assets/scene-fairhire.svg" alt="FairHire architecture animation" width="100%"/>
 
-A LangGraph planner delegates to specialist agents and RAG, then returns a growth plan for a merchant. → [`Merchant-Growth-AI`](https://github.com/ro-hit-10/Merchant-Growth-AI)
+An LLM-driven strategy agent decides whether to probe deeper, simplify or move on after every answer, then a coach agent writes the final report.
+→ [ai-mock-interview-coach](https://github.com/ro-hit-10/ai-mock-interview-coach)
 
-### 07 · Credit-card fraud detection <sub>· IEEE ICOSEC 2024</sub>
-<img src="assets/scene-fraud.svg" alt="SMOTE and XGBoost animation" width="100%"/>
+<br/>
 
-SMOTE rebalances 30K+ transactions from 80:20 to 50:50. Four models are compared on F2-score, and XGBoost reaches **88% recall**.
+## 🏆 Highlights
+
+<img src="assets/highlights.svg" alt="Highlights and milestones" width="100%"/>
 
 <br/>
 
 ## 📄 Publications
 
-| Paper | Venue |
-|---|---|
-| Predictive maintenance for small-scale wind turbines using IoT + ML | SCIS 2025, Canberra · [DOI](https://doi.org/10.1007/978-3-032-22917-5_18) |
-| AI-assisted mental-health screening | [DOI](https://doi.org/10.2991/978-94-6463-858-5_9) |
-| Credit-card fraud detection with SMOTE + XGBoost | IEEE ICOSEC 2024 · [DOI](https://doi.org/10.1109/ICOSEC61587.2024.10722667) |
-| IoT-based emergency vehicle alert system | IEEE ICIPCN 2024, Kathmandu University · [DOI](https://doi.org/10.1109/ICIPCN63822.2024.00119) |
+<img src="assets/publications.svg" alt="Publications timeline" width="100%"/>
 
-## 🏆 Highlights
+- [IoT-based emergency vehicle alert system](https://doi.org/10.1109/ICIPCN63822.2024.00119) - IEEE ICIPCN 2024
+- [Credit-card fraud detection](https://doi.org/10.1109/ICOSEC61587.2024.10722667) - IEEE ICOSEC 2024
+- [Predictive maintenance for small-scale wind turbines](https://doi.org/10.1007/978-3-032-22917-5_18) - SCIS 2025
+- [AI-assisted mental-health screening](https://doi.org/10.2991/978-94-6463-858-5_9) - Atlantis Press
 
-- 🎓 **Amazon Machine Learning Summer School 2026** - selected
-- 🥇 **Top-10 finalist, UBS Hackathon 2025** - *Ed-Connect*, AI mentorship for underprivileged students
-- 🛡️ Ran cybersecurity challenges for **1,500+ participants** at Hack Envasion CTF 2024
-- 📚 Deep Learning Specialization (DeepLearning.AI)
+<br/>
 
 ## 🐍 Contribution snake
 
