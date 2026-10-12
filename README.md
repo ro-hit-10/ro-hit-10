@@ -16,9 +16,7 @@
 
 <br/>
 
-## 🎬 Projects, in motion
-
-Each animation is built from the real architecture of the project.
+## 💼 My Work
 
 ### 01 · Invoice information extraction
 <img src="assets/scene-ocr.svg" alt="Invoice extraction architecture animation" width="100%"/>
@@ -84,10 +82,14 @@ An LLM-driven strategy agent decides whether to probe deeper, simplify or move o
 
 </div>
 
-## 📫 Say hi
+## 📫 Connect with me
 
-[![Email](https://img.shields.io/badge/Email-rohityeole2004@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:rohityeole2004@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohit-yeole-349b47292/)
-[![ResearchGate](https://img.shields.io/badge/ResearchGate-Publications-00CCBB?style=flat-square&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Rohit-Yeole-3)
+<img src="assets/connect.svg" alt="Connect with Rohit Yeole" width="100%"/>
 
-<sub>Open to ML / AI engineering roles and collaborations.</sub>
+<div align="center">
+
+[![Email](https://img.shields.io/badge/Email-Say_hello-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rohityeole2004@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rohit-yeole-349b47292/)
+[![ResearchGate](https://img.shields.io/badge/ResearchGate-Read_my_papers-00CCBB?style=for-the-badge&logo=researchgate&logoColor=white)](https://www.researchgate.net/profile/Rohit-Yeole-3)
+
+</div>
